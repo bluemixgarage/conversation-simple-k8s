@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: bot-son
-        image: nicegarage/haulotte-conversation
+        image: **CHANGE_ME**
         resources:
           requests:
             cpu: 100m
@@ -39,10 +39,10 @@ spec:
           - name: WORKSPACE_ID # the variable coming from config map
             valueFrom:
               configMapKeyRef:
-                name: conversation-vars
-                key: workspace_id
+                name: **CHANGE_ME**
+                key: **CHANGE_ME**
           - name: CONVERSATION_SERVICE # the IBM Cloud service that was bound
             valueFrom:
               secretKeyRef:
-                name: binding-conversation-simple
+                name: **CHANGE_ME**
                 key: binding
